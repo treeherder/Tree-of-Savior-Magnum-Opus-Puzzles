@@ -1,5 +1,7 @@
 # Tree-of-Savior-Magnum-Opus-Puzzles
 
+`Ingredient, Column, Row`
+
 # Large HP Potion
 
 Small HP Potion 0 0
