@@ -13,9 +13,15 @@ for i=1,#recipes do
 	local targetItemClassName = recipe["@TargetItem"];
 	local targetItemClass = GetClass("Item", targetItemClassName);
 
-	local targetItemLink = "http://tosdb.org/item/" .. targetItemClass.ClassID;
+	local targetItemLinkEN = "https://tos.neet.tv/items/" .. targetItemClass.ClassID;
+	local targetItemLinkKR = "https://tos-kr.neet.tv/items/" .. targetItemClass.ClassID;
 
-	local targetItemHeader = string.format("### [%s](%s)\n\n", dictionary.ReplaceDicIDInCompStr(targetItemClass.Name), targetItemLink);
+	local targetItemHeader = string.format("### %s [EN](%s) [KR](%s)\n\n",
+		dictionary.ReplaceDicIDInCompStr(targetItemClass.Name),
+		targetItemLinkEN,
+		targetItemLinkKR
+	);
+
 	file:write(targetItemHeader);
 
 	local ingredients = recipe:children();
@@ -31,9 +37,16 @@ for i=1,#recipes do
 
 		local ingredientItemClass = GetClass("Item", ingredientItemClassName);
 
-		local ingredientLink = "http://tosdb.org/item/" .. ingredientItemClass.ClassID;
+		local ingredientLinkEN = "https://tos.neet.tv/items/" .. ingredientItemClass.ClassID;
+		local ingredientLinkKR = "https://tos-kr.neet.tv/items/" .. ingredientItemClass.ClassID;
 
-		local tableRow = string.format("|[%s](%s)|%s|%s|\n", dictionary.ReplaceDicIDInCompStr(ingredientItemClass.Name), ingredientLink, column, row);
+		local tableRow = string.format("|%s [EN](%s) [KR](%s)|%s|%s|\n",
+			dictionary.ReplaceDicIDInCompStr(ingredientItemClass.Name),
+			ingredientLinkEN,
+			ingredientLinkKR,
+			column,
+			row
+		);
 
 		file:write(tableRow);
 	end
