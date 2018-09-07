@@ -1,6 +1,7 @@
 # Magnum Opus Puzzles
 
-##unlisted: Audra?  Possible recipes with boss cards?
+## Unlisted: 
+  Audra?  Possible recipes with boss cards?
 
 ### Large HP Potion [EN](https://tos.neet.tv/items/640004) [KR](https://tos-kr.neet.tv/items/640004)
 
